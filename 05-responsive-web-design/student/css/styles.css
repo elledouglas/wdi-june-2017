@@ -42,3 +42,54 @@ HINTS:
 - Write generic styles first, move on to more specific styles.
 - Group related styles (eg. 'type styles', 'header styles', etc.)
 */
+html {
+font-size: 62.5%
+}
+
+header {
+
+padding: 1rem 0;
+}
+
+
+.brand-supporting, .intro {
+display: none;
+}
+.brand {
+	text-align: center;
+margin: 0;
+font-family: 'Quicksand', sans-serif;
+color: #1ABC9C;
+}
+
+img {
+max-width: 100%;
+}
+
+/*POST STYLES */
+
+
+.post div {
+	font-size: 1.6rem;
+	padding: 1.4rem;
+}
+
+/*MEDIA QUERIES - TABLET */
+.post { width: 100%
+}
+@media (min-width: 600px){
+
+}
+
+.post {
+width: 48%;
+float: left;
+margin-right: 4%;
+}
+
+.post:nth-child( 2n ) {
+	margin-left: 4%;
+}
+/* margin pushed our - padding pushed in  what feature - is the min value or greater - mobile first . IF it is greater THAN apply these rules . If is is greater than 600px than do something ... do this
+
+.
