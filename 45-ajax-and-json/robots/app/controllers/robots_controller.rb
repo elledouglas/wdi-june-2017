@@ -9,7 +9,24 @@ class RobotsController < ApplicationController
   def show
     # We don't need to load the robot here, it's done in the load_robot method
     # @robot = Robot.find(params[:id])
+
+#     if html_requested
+#     if request.xhr? #XmlHttpRequest
+#       render layout: false
+#   end
+# elsif json_requested
+#   #return json
+# end
+respont_to do |format|
+  # this action is able to respont to hrml and json.
+  # if the client responds with hrml I am going to do
+  #   about if client asks for json I will return json
+  format.html do
   end
+  format.json do
+    render json: @robot, except: %i(created_at updated_at)
+  end
+end
 
   private
   # load_robot and robot_params are  in the private section because they aren't
